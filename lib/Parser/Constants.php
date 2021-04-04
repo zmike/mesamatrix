@@ -106,7 +106,7 @@ abstract class Constants
     const RE_ALL_DRIVERS_HINTS = [
         [ "/^all drivers$/i", FALSE ],
         [ "/^0 binary formats$/i", TRUE ],
-        [ "/^all drivers that support GLSL( \d+\.\d+\+?)?$/i", TRUE ],
+        [ "/.*all drivers that support GLSL( \d+\.\d+\+?)?$/i", TRUE ],
         [ "/^all - but needs GLX\/EGL extension to be useful$/i", TRUE ],
     ];
 
@@ -116,7 +116,7 @@ abstract class Constants
     // 2: dependency type
     // 3: dependency match index
     const RE_DEP_DRIVERS_HINTS = [
-        [ "/^all drivers that support (GL_[_[:alnum:]]+)$/i", TRUE, DependsOn::Extension, 1 ],
-        [ "/^all drivers that support GLES ?(\d+\.\d+\+?)?$/i", TRUE, DependsOn::GlesVersion, 1 ],
+        [ "/.*all drivers that support (GL_[_[:alnum:]]+)$/i", TRUE, DependsOn::Extension, 1 ],
+        [ "/.*all drivers that support GLES ?(\d+\.\d+\+?)?$/i", TRUE, DependsOn::GlesVersion, 1 ],
     ];
 }
